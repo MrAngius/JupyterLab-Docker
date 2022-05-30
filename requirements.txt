@@ -1,0 +1,11 @@
+pandas
+nunmpy
+scipy
+scikit-learn
+matplotlib
+beautifulsoup4
+requests
+pyarrow
+tqdm
+ipywidgets
+joblib

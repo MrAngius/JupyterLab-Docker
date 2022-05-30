@@ -1,0 +1,22 @@
+version: "3.2"
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8886:8888"
+    environment:
+      - DATA=/home/jupyrunner/project/data
+      - SOURCE=/home/jupyrunner/project/source
+    volumes:
+      - type: bind
+        source: ./data
+        target: /home/jupyrunner/project/data
+      - type: bind
+        source: ./notebooks
+        target: /home/jupyrunner/project/notebooks
+      - type: bind
+        source: ./source
+        target: /home/jupyrunner/project/source
